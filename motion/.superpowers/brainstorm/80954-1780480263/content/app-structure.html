@@ -1,0 +1,66 @@
+<h2>How should the app be structured?</h2>
+<p class="subtitle">This affects how you navigate between demos</p>
+
+<div class="options">
+
+  <div class="option" data-choice="gallery" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Gallery Index → Full-Page Demo</h3>
+      <p>Landing page with 6 cards. Click one → full-page demo. Back button returns to gallery. Clean separation, each demo gets the full viewport. Page transitions demo naturally fits here.</p>
+      <div class="mockup" style="margin-top:0.75rem">
+        <div class="mockup-header">/ index</div>
+        <div class="mockup-body" style="background:#0f0f0f; padding:0.75rem">
+          <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px">
+            <div style="background:#1a1a1a; border:1px solid #333; border-radius:4px; padding:6px; font-size:10px; color:#999">Scroll Reveal</div>
+            <div style="background:#1a1a1a; border:1px solid #333; border-radius:4px; padding:6px; font-size:10px; color:#999">Page Transition</div>
+            <div style="background:#1a1a1a; border:1px solid #333; border-radius:4px; padding:6px; font-size:10px; color:#999">Stagger List</div>
+            <div style="background:#1a1a1a; border:1px solid #333; border-radius:4px; padding:6px; font-size:10px; color:#999">Gesture Card</div>
+            <div style="background:#1a1a1a; border:1px solid #333; border-radius:4px; padding:6px; font-size:10px; color:#999">Shared Element</div>
+            <div style="background:#1a1a1a; border:1px solid #333; border-radius:4px; padding:6px; font-size:10px; color:#999">Parallax Hero</div>
+          </div>
+        </div>
+      </div>
+      <p class="label">Recommended · cleanest separation · routing fits demo B naturally</p>
+    </div>
+  </div>
+
+  <div class="option" data-choice="sidebar" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Persistent Sidebar Nav</h3>
+      <p>Fixed sidebar always visible. Click a demo → loads in the main panel. Storybook-like feel. Easy to switch rapidly, but sidebar eats viewport and some demos (parallax, page transitions) need full screen.</p>
+      <div class="mockup" style="margin-top:0.75rem">
+        <div class="mockup-header">all routes</div>
+        <div class="mockup-body" style="background:#0f0f0f; padding:0.75rem; display:flex; gap:6px; height:60px">
+          <div style="background:#1a1a1a; border:1px solid #333; border-radius:4px; padding:6px; width:80px; font-size:9px; color:#555; flex-shrink:0">
+            <div style="color:#6366f1; margin-bottom:3px; font-size:9px">▸ Scroll</div>
+            <div style="margin-bottom:2px">Page Trans</div>
+            <div style="margin-bottom:2px">Stagger</div>
+            <div>Gesture</div>
+          </div>
+          <div style="background:#111; border:1px solid #222; border-radius:4px; flex:1; display:flex;align-items:center;justify-content:center; font-size:10px; color:#444">demo content</div>
+        </div>
+      </div>
+      <p class="label">Dev-tool feel · sidebar limits full-viewport demos</p>
+    </div>
+  </div>
+
+  <div class="option" data-choice="scrollable" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Single Long Scrollable Page</h3>
+      <p>All 6 demos stacked vertically on one page. Great for parallax + scroll reveal (they need scrolling anyway), but page transitions and shared element demos don't fit the model well.</p>
+      <div class="mockup" style="margin-top:0.75rem">
+        <div class="mockup-header">/ (one page)</div>
+        <div class="mockup-body" style="background:#0f0f0f; padding:0.75rem">
+          <div style="background:#1a1a1a; border:1px solid #333; border-radius:4px; padding:4px 6px; font-size:9px; color:#555; margin-bottom:4px">§ Parallax Hero ↕</div>
+          <div style="background:#1a1a1a; border:1px solid #333; border-radius:4px; padding:4px 6px; font-size:9px; color:#555; margin-bottom:4px">§ Scroll Reveal ↕</div>
+          <div style="background:#1a1a1a; border:1px solid #333; border-radius:4px; padding:4px 6px; font-size:9px; color:#555">§ Stagger List ↕</div>
+        </div>
+      </div>
+      <p class="label">Scroll demos shine · breaks page transition + shared element demos</p>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,69 @@
+<h2>Motion Demo Candidates</h2>
+<p class="subtitle">Pick the ones that interest you most — select as many as you like</p>
+
+<div class="options" data-multiselect>
+
+  <div class="option" data-choice="scroll-reveal" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Scroll-Triggered Reveal</h3>
+      <p>Cards/sections fade + slide up as they enter the viewport. Classic "as you scroll the page comes to life" pattern. Uses <code>whileInView</code> + <code>viewport</code>.</p>
+      <p class="label">Easy · useScroll / whileInView</p>
+    </div>
+  </div>
+
+  <div class="option" data-choice="page-transition" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Page / Route Transition</h3>
+      <p>Routes fade or slide in/out on navigation. Wraps React Router routes in <code>AnimatePresence</code>. Shows how to avoid flash-of-content on SPA nav.</p>
+      <p class="label">Medium · AnimatePresence · React Router</p>
+    </div>
+  </div>
+
+  <div class="option" data-choice="stagger-list" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Staggered List / Grid</h3>
+      <p>Items animate in one after another — great for product grids, nav menus, or blog post lists. Shows variants + <code>staggerChildren</code> orchestration.</p>
+      <p class="label">Easy · variants · staggerChildren</p>
+    </div>
+  </div>
+
+  <div class="option" data-choice="gesture-card" onclick="toggleSelect(this)">
+    <div class="letter">D</div>
+    <div class="content">
+      <h3>Gesture-Driven Card</h3>
+      <p>Cards you can drag, with spring physics on release. Or a hover-tilt card using <code>useMotionValue</code> + <code>useTransform</code>. Tactile and satisfying.</p>
+      <p class="label">Medium · drag · useMotionValue · useTransform</p>
+    </div>
+  </div>
+
+  <div class="option" data-choice="shared-element" onclick="toggleSelect(this)">
+    <div class="letter">E</div>
+    <div class="content">
+      <h3>Shared Element Transition</h3>
+      <p>A card in a grid expands into a full detail view with a smooth morphing animation. The most impressive Motion feature. Uses <code>layoutId</code>.</p>
+      <p class="label">Hard · layoutId · AnimatePresence</p>
+    </div>
+  </div>
+
+  <div class="option" data-choice="parallax-hero" onclick="toggleSelect(this)">
+    <div class="letter">F</div>
+    <div class="content">
+      <h3>Parallax Hero Section</h3>
+      <p>Background, headline, and CTA move at different scroll speeds. Creates depth and makes a landing page feel premium. Uses <code>useScroll</code> + <code>useTransform</code>.</p>
+      <p class="label">Medium · useScroll · useTransform · parallax</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="section" style="margin-top: 2rem">
+  <p class="subtitle">Also in scope if you want to go deeper:</p>
+  <ul>
+    <li><strong>Animated tabs / accordion</strong> — layout animation on height changes (<code>layout</code> prop)</li>
+    <li><strong>Loading skeleton → content</strong> — smooth transition from placeholder to real data</li>
+    <li><strong>Drag-to-reorder list</strong> — sortable list with smooth reordering (uses <code>Reorder</code> component)</li>
+  </ul>
+</div>
