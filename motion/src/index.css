@@ -1,12 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+@theme {
+  --font-sans: 'DM Sans', sans-serif;
+  --font-heading: 'Space Grotesk', sans-serif;
 }
 
+:root {
+  --surface-base: #0F172A;
+  --surface-card: #1E293B;
+  --surface-border: #334155;
+  --text-primary: #F8FAFC;
+  --text-muted: #64748B;
+}
+
+* { box-sizing: border-box; }
+
 body {
-  margin: 0;
-  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--surface-base);
+  color: var(--text-primary);
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
