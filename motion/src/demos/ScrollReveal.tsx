@@ -19,7 +19,7 @@ export function ScrollReveal() {
   return (
     <DemoLayout title="Scroll Reveal" apis={['whileInView', 'viewport']} accent="#6366F1">
       <div className="max-w-5xl mx-auto px-8 py-16">
-        <div className="flex flex-col items-center justify-center text-center py-32 mb-8">
+        <div className="flex flex-col items-center justify-center text-center mb-8" style={{ minHeight: 'calc(100vh - 120px)' }}>
           <p className="text-xs font-mono mb-4" style={{ color: '#6366F1' }}>Built for teams that move fast</p>
           <h2 className="text-5xl font-bold mb-6 font-heading leading-tight" style={{ color: 'var(--text-primary)' }}>
             Everything you need<br />to ship faster
