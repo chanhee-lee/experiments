@@ -5,6 +5,7 @@ import { PageTransition } from './demos/PageTransition'
 import { StaggerList } from './demos/StaggerList'
 import { GestureCard } from './demos/GestureCard'
 import { SharedElement } from './demos/SharedElement'
+import { ParallaxHero } from './demos/ParallaxHero'
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/stagger-list" element={<StaggerList />} />
         <Route path="/gesture-card" element={<GestureCard />} />
         <Route path="/shared-element" element={<SharedElement />} />
+        <Route path="/parallax-hero" element={<ParallaxHero />} />
       </Routes>
     </BrowserRouter>
   )
