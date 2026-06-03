@@ -19,13 +19,16 @@ export function ScrollReveal() {
   return (
     <DemoLayout title="Scroll Reveal" apis={['whileInView', 'viewport']} accent="#6366F1">
       <div className="max-w-5xl mx-auto px-8 py-16">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold mb-3 font-heading" style={{ color: 'var(--text-primary)' }}>
-            Everything you need
+        <div className="flex flex-col items-center justify-center text-center py-32 mb-8">
+          <p className="text-xs font-mono mb-4" style={{ color: '#6366F1' }}>Built for teams that move fast</p>
+          <h2 className="text-5xl font-bold mb-6 font-heading leading-tight" style={{ color: 'var(--text-primary)' }}>
+            Everything you need<br />to ship faster
           </h2>
-          <p style={{ color: 'var(--text-muted)' }}>Scroll down to see the cards animate in</p>
+          <p className="text-lg max-w-md mb-2" style={{ color: 'var(--text-muted)' }}>
+            A unified platform for building, deploying, and scaling your applications.
+          </p>
+          <p className="text-sm animate-bounce mt-8" style={{ color: 'var(--text-muted)' }}>↓ Scroll to reveal</p>
         </div>
-        <div className="h-48" aria-hidden="true" />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {FEATURES.map(f => (
             <motion.div
