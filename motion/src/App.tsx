@@ -4,6 +4,7 @@ import { ScrollReveal } from './demos/ScrollReveal'
 import { PageTransition } from './demos/PageTransition'
 import { StaggerList } from './demos/StaggerList'
 import { GestureCard } from './demos/GestureCard'
+import { SharedElement } from './demos/SharedElement'
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="/page-transition/*" element={<PageTransition />} />
         <Route path="/stagger-list" element={<StaggerList />} />
         <Route path="/gesture-card" element={<GestureCard />} />
+        <Route path="/shared-element" element={<SharedElement />} />
       </Routes>
     </BrowserRouter>
   )
