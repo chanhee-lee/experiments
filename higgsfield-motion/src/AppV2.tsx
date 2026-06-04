@@ -171,7 +171,7 @@ export default function AppV2() {
         id="travel-glow"
         className="absolute z-20 pointer-events-none"
         style={{
-          top: '28%',
+          top: '14%',
           left: '50%',
           transform: 'translate(-50%, -50%)',
           width: '18px',
