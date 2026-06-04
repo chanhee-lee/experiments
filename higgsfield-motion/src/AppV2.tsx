@@ -135,6 +135,27 @@ export default function AppV2() {
         10.6
       )
 
+      // ── Shared element: candle flame → constellation apex ────────────────────
+      // Starts at candle position (upper-center, ~30% from top), travels to the
+      // triangle apex (also upper-center, ~22% from top) as Scene 1→2 crossfades.
+      // The blur shrinks so it reads as a pinpoint star rather than a warm flame.
+      tl.fromTo(
+        '#travel-glow',
+        { opacity: 1, scale: 1, y: '0%', filter: 'blur(6px)' },
+        {
+          opacity: 0.85,
+          scale: 0.35,
+          y: '-12%',
+          filter: 'blur(1px)',
+          ease: 'power2.inOut',
+          duration: 2,
+        },
+        3
+      )
+      // Fade out once Scene 2 text is fully on screen — the constellation image
+      // itself carries the visual from here
+      tl.to('#travel-glow', { opacity: 0, duration: 0.5 }, 5.8)
+
       // End marker: holds pin briefly after last text enters before unpinning
       tl.to({}, { duration: 0.1 }, 12)
     },
@@ -143,6 +164,24 @@ export default function AppV2() {
 
   return (
     <div ref={rootRef} className="relative h-screen overflow-hidden">
+      {/* ── Travel glow: candle flame → constellation apex ──────────────── */}
+      {/* Positioned at the candle's location in the video (~30% from top, centered).
+          GSAP moves it upward and collapses it into a pinpoint as Scene 2 fades in. */}
+      <div
+        id="travel-glow"
+        className="absolute z-20 pointer-events-none"
+        style={{
+          top: '28%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          width: '18px',
+          height: '18px',
+          borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(245,166,35,0.95) 0%, rgba(245,166,35,0.4) 50%, transparent 70%)',
+          boxShadow: '0 0 12px 6px rgba(245,166,35,0.5), 0 0 30px 12px rgba(245,166,35,0.2)',
+        }}
+      />
+
       {/* ── Scene 1: The Void ────────────────────────────────────────────── */}
       <div id="void-scene" className="absolute inset-0">
         <div id="void-bg" className="absolute inset-0 scale-[1.15]">
