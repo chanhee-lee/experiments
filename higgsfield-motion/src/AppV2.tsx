@@ -181,11 +181,11 @@ export default function AppV2() {
 
       {/* ── Corner lights: constellation corners → radiant center ───────── */}
       {/* Top apex of triangle */}
-      <div id="corner-top" className="absolute z-20 pointer-events-none" style={glowOrb('19%', '50%', 16, 0.9)} />
+      <div id="corner-top" className="absolute z-20 pointer-events-none" style={glowOrb('17%', '50%', 16, 0.9)} />
       {/* Bottom-left corner */}
-      <div id="corner-bl" className="absolute z-20 pointer-events-none" style={glowOrb('71%', '33%', 16, 0.9)} />
+      <div id="corner-bl" className="absolute z-20 pointer-events-none" style={glowOrb('73%', '35%', 16, 0.9)} />
       {/* Bottom-right corner */}
-      <div id="corner-br" className="absolute z-20 pointer-events-none" style={glowOrb('71%', '67%', 16, 0.9)} />
+      <div id="corner-br" className="absolute z-20 pointer-events-none" style={glowOrb('73%', '65%', 16, 0.9)} />
 
       {/* ── Merge burst: flash at center as corners combine ─────────────── */}
       <div
